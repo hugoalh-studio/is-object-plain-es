@@ -5,6 +5,8 @@
  */
 export function isObjectPlain(item: object): boolean {
 	if (
+		typeof item !== "object" ||
+		item === null ||
 		!(item instanceof Object) ||
 		item.constructor.name !== "Object" ||
 		Object.prototype.toString.call(item) !== "[object Object]"
