@@ -1,13 +1,17 @@
 # yaml-language-server: $schema=https://citation-file-format.github.io/1.2.0/schema.json
 cff-version: "1.2.0"
-title: "Is Object Plain (TypeScript)"
+title: "Is Object Plain (ES)"
 message: "If you use this software, please cite it using the metadata from this file."
 type: "software"
 authors:
   - name: "hugoalh Studio"
-repository-code: "https://github.com/hugoalh-studio/is-object-plain-ts"
+repository-code: "https://github.com/hugoalh-studio/is-object-plain-es"
 keywords:
+  - "es"
   - "is"
+  - "javascript"
+  - "js"
+  - "modulejs"
   - "object"
   - "plain"
   - "ts"

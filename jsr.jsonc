@@ -1,7 +1,7 @@
 // This file is only for JSR related, non-JSR related must set in the file `deno.jsonc`!
 {
 	"name": "@hugoalh/is-object-plain",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"exports": {
 		".": "./mod.ts"
 	},
@@ -19,7 +19,9 @@
 			"**/bench.ts",
 			"**/bench.tsx",
 			"**/test.ts",
-			"**/test.tsx"
+			"**/test.tsx",
+			".dnt.ts",
+			"npm/**"
 		],
 		"include": [
 			"**/*.ts",
