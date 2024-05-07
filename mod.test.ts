@@ -1,4 +1,4 @@
-import { assertEquals } from "STD/assert/assert_equals.ts";
+import { assertEquals } from "STD/assert/assert-equals";
 import { isObjectPlain } from "./mod.ts";
 class Sample1 {
 	x: unknown;
