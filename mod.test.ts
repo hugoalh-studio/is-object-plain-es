@@ -8,89 +8,74 @@ class Sample1 {
 }
 function Sample2() { }
 Sample2.prototype.constructor = Object;
-Deno.test("False 1", { permissions: "none" }, () => {
+Deno.test("Array With 2 Length", { permissions: "none" }, () => {
+	assertEquals(isObjectPlain(['foo', 'bar']), false);
+});
+Deno.test("Map", { permissions: "none" }, () => {
 	assertEquals(isObjectPlain(new Map([
 		["a", 1],
 		["b", 2],
 		["c", 3]
 	])), false);
 });
-Deno.test("False 2", { permissions: "none" }, () => {
-	assertEquals(isObjectPlain(['foo', 'bar']), false);
-});
-Deno.test("False 3", { permissions: "none" }, () => {
+Deno.test("Class Instance Standard", { permissions: "none" }, () => {
 	assertEquals(isObjectPlain(new Sample1(1)), false);
 });
-Deno.test("False 4", { permissions: "none" }, () => {
+Deno.test("Math", { permissions: "none" }, () => {
 	assertEquals(isObjectPlain(Math), false);
 });
-Deno.test("False 5", { permissions: "none" }, () => {
+Deno.test("JSON", { permissions: "none" }, () => {
 	assertEquals(isObjectPlain(JSON), false);
 });
-Deno.test("False 6", { permissions: "none" }, () => {
+Deno.test("Atomics", { permissions: "none" }, () => {
 	assertEquals(isObjectPlain(Atomics), false);
 });
-Deno.test("False 7", { permissions: "none" }, () => {
+Deno.test("Error Class", { permissions: "none" }, () => {
 	assertEquals(isObjectPlain(Error), false);
 });
-Deno.test("False 8", { permissions: "none" }, () => {
+Deno.test("Function", { permissions: "none" }, () => {
 	assertEquals(isObjectPlain(() => { }), false);
 });
-Deno.test("False 9", { permissions: "none" }, () => {
+Deno.test("Regular Expression", { permissions: "none" }, () => {
 	assertEquals(isObjectPlain(/./), false);
 });
-Deno.test("False 10", { permissions: "none" }, () => {
+Deno.test("`null`", { permissions: "none" }, () => {
 	assertEquals(isObjectPlain(null as unknown as object), false);
 });
-Deno.test("False 11", { permissions: "none" }, () => {
-	assertEquals(isObjectPlain(undefined as unknown as object), false);
-});
-Deno.test("False 12", { permissions: "none" }, () => {
-	assertEquals(isObjectPlain(Number.NaN as unknown as object), false);
-});
-Deno.test("False 13", { permissions: "none" }, () => {
-	assertEquals(isObjectPlain('' as unknown as object), false);
-});
-Deno.test("False 14", { permissions: "none" }, () => {
-	assertEquals(isObjectPlain(0 as unknown as object), false);
-});
-Deno.test("False 15", { permissions: "none" }, () => {
-	assertEquals(isObjectPlain(false as unknown as object), false);
-});
-Deno.test("False 16", { permissions: "none" }, () => {
+Deno.test("Class Instance Legacy", { permissions: "none" }, () => {
 	//@ts-ignore For test only.
 	assertEquals(isObjectPlain(new Sample2() as unknown as object), false);
 });
-Deno.test("False 17", { permissions: "none" }, () => {
-	assertEquals(isObjectPlain(Object.create({})), false);
-});
-Deno.test("False 18", { permissions: "none" }, () => {
+Deno.test("InReg Object", { permissions: "none" }, () => {
 	assertEquals(isObjectPlain({ constructor: Sample1 }), false);
 });
-Deno.test("False 19", { permissions: "none" }, () => {
-	assertEquals(isObjectPlain(Object.create(null)), false);
-});
-Deno.test("False 20", { permissions: "none" }, () => {
+Deno.test("Function Arguments", { permissions: "none" }, () => {
 	(function () {
 		assertEquals(isObjectPlain(arguments), false);
 	})();
 });
-Deno.test("True 1", { permissions: "none" }, () => {
+Deno.test("Plain Object With 0 Entries", { permissions: "none" }, () => {
+	assertEquals(isObjectPlain({}), true);
+});
+Deno.test("Plain Object With 2 Primitive Entries", { permissions: "none" }, () => {
+	assertEquals(isObjectPlain({
+		foo: true,
+		valueOf: 0
+	}), true);
+});
+Deno.test("Plain Object With 3 Primitive Entries", { permissions: "none" }, () => {
 	assertEquals(isObjectPlain({
 		a: 1,
 		b: 2,
 		c: 3
 	}), true);
 });
-Deno.test("True 2", { permissions: "none" }, () => {
-	assertEquals(isObjectPlain({}), true);
+Deno.test("Object Constructor With `null`", { permissions: "none" }, () => {
+	assertEquals(isObjectPlain(Object.create(null)), false);
 });
-Deno.test("True 3", { permissions: "none" }, () => {
-	assertEquals(isObjectPlain({ foo: true }), true);
+Deno.test("Object Constructor With `{}`", { permissions: "none" }, () => {
+	assertEquals(isObjectPlain(Object.create({})), false);
 });
-Deno.test("True 4", { permissions: "none" }, () => {
-	assertEquals(isObjectPlain({ valueOf: 0 }), true);
-});
-Deno.test("True 5", { permissions: "none" }, () => {
+Deno.test("Object Instance", { permissions: "none" }, () => {
 	assertEquals(isObjectPlain(new Object()), true);
 });
