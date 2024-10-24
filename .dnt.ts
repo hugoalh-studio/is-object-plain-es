@@ -19,15 +19,15 @@ await invokeDenoNodeJSTransformer({
 			"object",
 			"plain"
 		],
-		homepage: "https://github.com/hugoalh-studio/is-object-plain-es#readme",
+		homepage: "https://github.com/hugoalh/is-object-plain-es#readme",
 		bugs: {
-			url: "https://github.com/hugoalh-studio/is-object-plain-es/issues"
+			url: "https://github.com/hugoalh/is-object-plain-es/issues"
 		},
 		license: "MIT",
 		author: "hugoalh",
 		repository: {
 			type: "git",
-			url: "git+https://github.com/hugoalh-studio/is-object-plain-es.git"
+			url: "git+https://github.com/hugoalh/is-object-plain-es.git"
 		},
 		scripts: {
 		},

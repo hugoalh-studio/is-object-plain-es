@@ -2,7 +2,7 @@
 
 [**⚖️** MIT](./LICENSE.md)
 
-[![GitHub: hugoalh-studio/is-object-plain-es](https://img.shields.io/github/v/release/hugoalh-studio/is-object-plain-es?label=hugoalh-studio/is-object-plain-es&labelColor=181717&logo=github&logoColor=ffffff&sort=semver&style=flat "GitHub: hugoalh-studio/is-object-plain-es")](https://github.com/hugoalh-studio/is-object-plain-es)
+[![GitHub: hugoalh/is-object-plain-es](https://img.shields.io/github/v/release/hugoalh/is-object-plain-es?label=hugoalh/is-object-plain-es&labelColor=181717&logo=github&logoColor=ffffff&sort=semver&style=flat "GitHub: hugoalh/is-object-plain-es")](https://github.com/hugoalh/is-object-plain-es)
 [![JSR: @hugoalh/is-object-plain](https://img.shields.io/jsr/v/@hugoalh/is-object-plain?label=@hugoalh/is-object-plain&labelColor=F7DF1E&logo=jsr&logoColor=000000&style=flat "JSR: @hugoalh/is-object-plain")](https://jsr.io/@hugoalh/is-object-plain)
 [![NPM: @hugoalh/is-object-plain](https://img.shields.io/npm/v/@hugoalh/is-object-plain?label=@hugoalh/is-object-plain&labelColor=CB3837&logo=npm&logoColor=ffffff&style=flat "NPM: @hugoalh/is-object-plain")](https://www.npmjs.com/package/@hugoalh/is-object-plain)
 
@@ -26,7 +26,7 @@ An ES (JavaScript & TypeScript) module to determine whether the object is plain.
 
 - **Remote - GitHub Raw:**
   ```
-  https://raw.githubusercontent.com/hugoalh-studio/is-object-plain-es/{Tag}/mod.ts
+  https://raw.githubusercontent.com/hugoalh/is-object-plain-es/{Tag}/mod.ts
   ```
 - **JSR:**
   ```
