@@ -28,7 +28,7 @@ export function isObjectPlain(item: object): boolean {
 		return false;
 	}
 	const itemDescriptors = Object.getOwnPropertyDescriptors(item);
-	let enumerableCount = 0;
+	let enumerableCount: number = 0;
 	for (const descriptor in itemDescriptors) {
 		if (Object.hasOwn(itemDescriptors, descriptor)) {
 			const descriptorProperties: PropertyDescriptor = itemDescriptors[descriptor];
